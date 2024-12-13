@@ -19,9 +19,12 @@ updates:
         update-types:
           - 'minor'
           - 'patch'
-      security-fixes:
+      production-security-fixes:
         applies-to: security-updates
-        patterns: ['*']
+        dependency-type: 'production'
+      development-security-fixes:
+        applies-to: security-updates
+        dependency-type: 'development'
     ignore:
       - dependency-name: '*'
         update-types: ['version-update:semver-major']
